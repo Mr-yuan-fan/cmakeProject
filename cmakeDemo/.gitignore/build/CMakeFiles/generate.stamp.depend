@@ -1,0 +1,25 @@
+# CMake generation dependency list for this directory.
+E:/c++/c++StudySln/cmakeDemo/CMakeLists.txt
+E:/c++/c++StudySln/cmakeDemo/build/CMakeFiles/3.26.0-rc3/CMakeCCompiler.cmake
+E:/c++/c++StudySln/cmakeDemo/build/CMakeFiles/3.26.0-rc3/CMakeCXXCompiler.cmake
+E:/c++/c++StudySln/cmakeDemo/build/CMakeFiles/3.26.0-rc3/CMakeRCCompiler.cmake
+E:/c++/c++StudySln/cmakeDemo/build/CMakeFiles/3.26.0-rc3/CMakeSystem.cmake
+E:/c++/c++StudySln/cmakeDemo/cmake/modules/AddCodeFile.cmake
+F:/softwarePackages/cmake-3.26.0-rc3-windows-x86_64/cmake-3.26.0-rc3-windows-x86_64/share/cmake-3.26/Modules/CMakeCInformation.cmake
+F:/softwarePackages/cmake-3.26.0-rc3-windows-x86_64/cmake-3.26.0-rc3-windows-x86_64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake
+F:/softwarePackages/cmake-3.26.0-rc3-windows-x86_64/cmake-3.26.0-rc3-windows-x86_64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake
+F:/softwarePackages/cmake-3.26.0-rc3-windows-x86_64/cmake-3.26.0-rc3-windows-x86_64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake
+F:/softwarePackages/cmake-3.26.0-rc3-windows-x86_64/cmake-3.26.0-rc3-windows-x86_64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake
+F:/softwarePackages/cmake-3.26.0-rc3-windows-x86_64/cmake-3.26.0-rc3-windows-x86_64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake
+F:/softwarePackages/cmake-3.26.0-rc3-windows-x86_64/cmake-3.26.0-rc3-windows-x86_64/share/cmake-3.26/Modules/CMakeRCInformation.cmake
+F:/softwarePackages/cmake-3.26.0-rc3-windows-x86_64/cmake-3.26.0-rc3-windows-x86_64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake
+F:/softwarePackages/cmake-3.26.0-rc3-windows-x86_64/cmake-3.26.0-rc3-windows-x86_64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake
+F:/softwarePackages/cmake-3.26.0-rc3-windows-x86_64/cmake-3.26.0-rc3-windows-x86_64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+F:/softwarePackages/cmake-3.26.0-rc3-windows-x86_64/cmake-3.26.0-rc3-windows-x86_64/share/cmake-3.26/Modules/Compiler/MSVC-C.cmake
+F:/softwarePackages/cmake-3.26.0-rc3-windows-x86_64/cmake-3.26.0-rc3-windows-x86_64/share/cmake-3.26/Modules/Compiler/MSVC-CXX.cmake
+F:/softwarePackages/cmake-3.26.0-rc3-windows-x86_64/cmake-3.26.0-rc3-windows-x86_64/share/cmake-3.26/Modules/Compiler/MSVC.cmake
+F:/softwarePackages/cmake-3.26.0-rc3-windows-x86_64/cmake-3.26.0-rc3-windows-x86_64/share/cmake-3.26/Modules/Platform/Windows-MSVC-C.cmake
+F:/softwarePackages/cmake-3.26.0-rc3-windows-x86_64/cmake-3.26.0-rc3-windows-x86_64/share/cmake-3.26/Modules/Platform/Windows-MSVC-CXX.cmake
+F:/softwarePackages/cmake-3.26.0-rc3-windows-x86_64/cmake-3.26.0-rc3-windows-x86_64/share/cmake-3.26/Modules/Platform/Windows-MSVC.cmake
+F:/softwarePackages/cmake-3.26.0-rc3-windows-x86_64/cmake-3.26.0-rc3-windows-x86_64/share/cmake-3.26/Modules/Platform/Windows.cmake
+F:/softwarePackages/cmake-3.26.0-rc3-windows-x86_64/cmake-3.26.0-rc3-windows-x86_64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake

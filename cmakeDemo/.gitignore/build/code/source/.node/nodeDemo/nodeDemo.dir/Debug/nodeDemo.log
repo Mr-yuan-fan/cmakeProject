@@ -1,0 +1,5 @@
+﻿  1>Building Custom Rule E:/c++/c++StudySln/cmakeDemo/code/source/.node/nodeDemo/CMakeLists.txt
+  addon.cpp
+  nothing.c
+    正在创建库 E:/c++/c++StudySln/cmakeDemo/bin/win64/Debug/nodeDemo.lib 和对象 E:/c++/c++StudySln/cmakeDemo/bin/win64/Debug/nodeDemo.exp
+  nodeDemo.vcxproj -> E:\c++\c++StudySln\cmakeDemo\bin\win64\Debug\nodeDemo.node

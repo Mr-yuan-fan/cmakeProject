@@ -1,0 +1,10 @@
+^E:\C++\C++STUDYSLN\CMAKEDEMO\CODE\SOURCE\.NODE\CPLUSEXTENSION\CMAKELISTS.TXT
+setlocal
+F:\softwarePackages\cmake-3.26.0-rc3-windows-x86_64\cmake-3.26.0-rc3-windows-x86_64\bin\cmake.exe -SE:/c++/c++StudySln/cmakeDemo -BE:/c++/c++StudySln/cmakeDemo/build --check-stamp-file E:/c++/c++StudySln/cmakeDemo/build/code/source/.node/cplusExtension/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

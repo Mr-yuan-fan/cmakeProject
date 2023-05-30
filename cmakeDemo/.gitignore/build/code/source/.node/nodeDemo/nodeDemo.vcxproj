@@ -1,0 +1,848 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{95724653-CB4D-39B2-BB76-8E180FA36B8B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>nodeDemo</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\c++\c++StudySln\cmakeDemo\bin\win64\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">nodeDemo.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">nodeDemo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.node</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\c++\c++StudySln\cmakeDemo\bin\win64\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">nodeDemo.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">nodeDemo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.node</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\c++\c++StudySln\cmakeDemo\bin\win64\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">nodeDemo.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">nodeDemo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.node</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\c++\c++StudySln\cmakeDemo\bin\win64\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">nodeDemo.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">nodeDemo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.node</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\c++\c++StudySln\cmakeDemo\code\include\dll\thread;E:\c++\c++StudySln\cmakeDemo\code\include\dll\algorithm;E:\c++\c++StudySln\cmakeDemo\code\include\dll\common;E:\c++\c++StudySln\cmakeDemo\code\include\lib\designMode;E:\c++\c++StudySln\cmakeDemo\code\source;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NODEDEMO_API_FLAG;CMAKE_INTDIR="Debug";nodeDemo_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;NODEDEMO_API_FLAG;CMAKE_INTDIR=\"Debug\";nodeDemo_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\c++\c++StudySln\cmakeDemo\code\include\dll\thread;E:\c++\c++StudySln\cmakeDemo\code\include\dll\algorithm;E:\c++\c++StudySln\cmakeDemo\code\include\dll\common;E:\c++\c++StudySln\cmakeDemo\code\include\lib\designMode;E:\c++\c++StudySln\cmakeDemo\code\source;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\c++\c++StudySln\cmakeDemo\code\include\dll\thread;E:\c++\c++StudySln\cmakeDemo\code\include\dll\algorithm;E:\c++\c++StudySln\cmakeDemo\code\include\dll\common;E:\c++\c++StudySln\cmakeDemo\code\include\lib\designMode;E:\c++\c++StudySln\cmakeDemo\code\source;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/c++/c++StudySln/cmakeDemo/bin/win64/Debug/nodeDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/c++/c++StudySln/cmakeDemo/bin/win64/Debug/nodeDemo.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\c++\c++StudySln\cmakeDemo\code\include\dll\thread;E:\c++\c++StudySln\cmakeDemo\code\include\dll\algorithm;E:\c++\c++StudySln\cmakeDemo\code\include\dll\common;E:\c++\c++StudySln\cmakeDemo\code\include\lib\designMode;E:\c++\c++StudySln\cmakeDemo\code\source;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NODEDEMO_API_FLAG;CMAKE_INTDIR="Release";nodeDemo_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NODEDEMO_API_FLAG;CMAKE_INTDIR=\"Release\";nodeDemo_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\c++\c++StudySln\cmakeDemo\code\include\dll\thread;E:\c++\c++StudySln\cmakeDemo\code\include\dll\algorithm;E:\c++\c++StudySln\cmakeDemo\code\include\dll\common;E:\c++\c++StudySln\cmakeDemo\code\include\lib\designMode;E:\c++\c++StudySln\cmakeDemo\code\source;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\c++\c++StudySln\cmakeDemo\code\include\dll\thread;E:\c++\c++StudySln\cmakeDemo\code\include\dll\algorithm;E:\c++\c++StudySln\cmakeDemo\code\include\dll\common;E:\c++\c++StudySln\cmakeDemo\code\include\lib\designMode;E:\c++\c++StudySln\cmakeDemo\code\source;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/c++/c++StudySln/cmakeDemo/bin/win64/Release/nodeDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/c++/c++StudySln/cmakeDemo/bin/win64/Release/nodeDemo.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\c++\c++StudySln\cmakeDemo\code\include\dll\thread;E:\c++\c++StudySln\cmakeDemo\code\include\dll\algorithm;E:\c++\c++StudySln\cmakeDemo\code\include\dll\common;E:\c++\c++StudySln\cmakeDemo\code\include\lib\designMode;E:\c++\c++StudySln\cmakeDemo\code\source;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NODEDEMO_API_FLAG;CMAKE_INTDIR="MinSizeRel";nodeDemo_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NODEDEMO_API_FLAG;CMAKE_INTDIR=\"MinSizeRel\";nodeDemo_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\c++\c++StudySln\cmakeDemo\code\include\dll\thread;E:\c++\c++StudySln\cmakeDemo\code\include\dll\algorithm;E:\c++\c++StudySln\cmakeDemo\code\include\dll\common;E:\c++\c++StudySln\cmakeDemo\code\include\lib\designMode;E:\c++\c++StudySln\cmakeDemo\code\source;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\c++\c++StudySln\cmakeDemo\code\include\dll\thread;E:\c++\c++StudySln\cmakeDemo\code\include\dll\algorithm;E:\c++\c++StudySln\cmakeDemo\code\include\dll\common;E:\c++\c++StudySln\cmakeDemo\code\include\lib\designMode;E:\c++\c++StudySln\cmakeDemo\code\source;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/c++/c++StudySln/cmakeDemo/bin/win64/MinSizeRel/nodeDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/c++/c++StudySln/cmakeDemo/bin/win64/MinSizeRel/nodeDemo.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\c++\c++StudySln\cmakeDemo\code\include\dll\thread;E:\c++\c++StudySln\cmakeDemo\code\include\dll\algorithm;E:\c++\c++StudySln\cmakeDemo\code\include\dll\common;E:\c++\c++StudySln\cmakeDemo\code\include\lib\designMode;E:\c++\c++StudySln\cmakeDemo\code\source;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NODEDEMO_API_FLAG;CMAKE_INTDIR="RelWithDebInfo";nodeDemo_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NODEDEMO_API_FLAG;CMAKE_INTDIR=\"RelWithDebInfo\";nodeDemo_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\c++\c++StudySln\cmakeDemo\code\include\dll\thread;E:\c++\c++StudySln\cmakeDemo\code\include\dll\algorithm;E:\c++\c++StudySln\cmakeDemo\code\include\dll\common;E:\c++\c++StudySln\cmakeDemo\code\include\lib\designMode;E:\c++\c++StudySln\cmakeDemo\code\source;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\c++\c++StudySln\cmakeDemo\code\include\dll\thread;E:\c++\c++StudySln\cmakeDemo\code\include\dll\algorithm;E:\c++\c++StudySln\cmakeDemo\code\include\dll\common;E:\c++\c++StudySln\cmakeDemo\code\include\lib\designMode;E:\c++\c++StudySln\cmakeDemo\code\source;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api;E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/c++/c++StudySln/cmakeDemo/bin/win64/RelWithDebInfo/nodeDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/c++/c++StudySln/cmakeDemo/bin/win64/RelWithDebInfo/nodeDemo.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\CMakeLists.txt">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/c++/c++StudySln/cmakeDemo/code/source/.node/nodeDemo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+F:\softwarePackages\cmake-3.26.0-rc3-windows-x86_64\cmake-3.26.0-rc3-windows-x86_64\bin\cmake.exe -SE:/c++/c++StudySln/cmakeDemo -BE:/c++/c++StudySln/cmakeDemo/build --check-stamp-file E:/c++/c++StudySln/cmakeDemo/build/code/source/.node/nodeDemo/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\c++\c++StudySln\cmakeDemo\build\code\source\.node\nodeDemo\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/c++/c++StudySln/cmakeDemo/code/source/.node/nodeDemo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+F:\softwarePackages\cmake-3.26.0-rc3-windows-x86_64\cmake-3.26.0-rc3-windows-x86_64\bin\cmake.exe -SE:/c++/c++StudySln/cmakeDemo -BE:/c++/c++StudySln/cmakeDemo/build --check-stamp-file E:/c++/c++StudySln/cmakeDemo/build/code/source/.node/nodeDemo/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\c++\c++StudySln\cmakeDemo\build\code\source\.node\nodeDemo\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/c++/c++StudySln/cmakeDemo/code/source/.node/nodeDemo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+F:\softwarePackages\cmake-3.26.0-rc3-windows-x86_64\cmake-3.26.0-rc3-windows-x86_64\bin\cmake.exe -SE:/c++/c++StudySln/cmakeDemo -BE:/c++/c++StudySln/cmakeDemo/build --check-stamp-file E:/c++/c++StudySln/cmakeDemo/build/code/source/.node/nodeDemo/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\c++\c++StudySln\cmakeDemo\build\code\source\.node\nodeDemo\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/c++/c++StudySln/cmakeDemo/code/source/.node/nodeDemo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+F:\softwarePackages\cmake-3.26.0-rc3-windows-x86_64\cmake-3.26.0-rc3-windows-x86_64\bin\cmake.exe -SE:/c++/c++StudySln/cmakeDemo -BE:/c++/c++StudySln/cmakeDemo/build --check-stamp-file E:/c++/c++StudySln/cmakeDemo/build/code/source/.node/nodeDemo/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\c++\c++StudySln\cmakeDemo\build\code\source\.node\nodeDemo\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\grade.h" />
+    <ClCompile Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\addon.cpp" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\napi-inl.deprecated.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\napi-inl.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\napi.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node_api_types.h" />
+    <ClCompile Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\nothing.c" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\js_native_api.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\js_native_api_types.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\node.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\node_api.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\node_api_types.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\node_buffer.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\node_object_wrap.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\node_version.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\uv.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\v8-fast-api-calls.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\v8-internal.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\v8-platform.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\v8-profiler.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\v8-util.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\v8-value-serializer-version.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\v8-version-string.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\v8-version.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\v8-wasm-trap-handler-posix.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\v8-wasm-trap-handler-win.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\v8.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\v8config.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\zconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\zlib.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\allocation.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\common.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\custom-space.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\garbage-collected.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\heap.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\liveness-broker.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\macros.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\member.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\persistent.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\platform.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\prefinalizer.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\source-location.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\trace-trait.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\type-traits.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\visitor.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\internal\accessors.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\internal\api-constants.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\internal\compiler-specific.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\internal\finalizer-trait.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\internal\gc-info.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\internal\logging.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\internal\persistent-node.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\internal\pointer-policies.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\cppgc\internal\prefinalizer-handler.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\libplatform\libplatform-export.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\libplatform\libplatform.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\libplatform\v8-tracing.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\aes.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\asn1.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\asn1_mac.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\asn1err.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\asn1t.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\async.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\asyncerr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\bio.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\bioerr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\blowfish.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\bn.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\bn_conf_asm.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\bn_conf_no-asm.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\bnerr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\buffer.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\buffererr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\camellia.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\cast.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\cmac.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\cms.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\cmserr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\comp.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\comperr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\conf_api.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\conferr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\crypto.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\cryptoerr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\ct.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\cterr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\des.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\dh.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\dherr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\dsa.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\dsaerr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\dso_conf_asm.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\dso_conf_no-asm.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\dtls1.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\e_os2.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\ebcdic.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\ec.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\ecdh.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\ecdsa.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\ecerr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\engine.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\engineerr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\err.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\evp.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\evperr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\hmac.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\idea.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\kdf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\kdferr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\lhash.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\md2.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\md4.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\md5.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\mdc2.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\modes.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\obj_mac.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\objects.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\objectserr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\ocsp.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\ocsperr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\opensslconf_asm.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\opensslconf_no-asm.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\opensslv.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\ossl_typ.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\pem.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\pem2.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\pemerr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\pkcs12.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\pkcs12err.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\pkcs7.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\pkcs7err.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\rand.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\rand_drbg.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\randerr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\rc2.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\rc4.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\rc5.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\ripemd.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\rsa.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\rsaerr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\safestack.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\seed.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\sha.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\srp.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\srtp.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\ssl.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\ssl2.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\ssl3.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\sslerr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\stack.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\store.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\storeerr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\symhacks.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\tls1.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\ts.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\tserr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\txt_db.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\ui.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\uierr.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\whrlpool.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\x509.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\x509_vfy.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\x509err.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\x509v3.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\x509v3err.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86_64\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86_64\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86_64\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86_64\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86_64\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86_64\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86_64\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86_64\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86_64\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86_64\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86_64\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86_64\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86_64\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86_64\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\BSD-x86_64\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN32\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN32\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN32\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN32\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN32\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN32\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN32\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN32\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN32\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN32\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN32\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN32\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN32\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN32\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN32\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64-ARM\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64-ARM\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64-ARM\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64-ARM\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64-ARM\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64A\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64A\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64A\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64A\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64A\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64A\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64A\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64A\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64A\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64A\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64A\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64A\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64A\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64A\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\VC-WIN64A\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix-gcc\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix-gcc\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix-gcc\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix-gcc\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix-gcc\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix-gcc\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix-gcc\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix-gcc\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix-gcc\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix-gcc\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix-gcc\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix-gcc\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix-gcc\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix-gcc\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix-gcc\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix64-gcc\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix64-gcc\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix64-gcc\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix64-gcc\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix64-gcc\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix64-gcc\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix64-gcc\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix64-gcc\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix64-gcc\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix64-gcc\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix64-gcc\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix64-gcc\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix64-gcc\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix64-gcc\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\aix64-gcc\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin-i386-cc\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin-i386-cc\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin-i386-cc\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin-i386-cc\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin-i386-cc\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin-i386-cc\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin-i386-cc\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin-i386-cc\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin-i386-cc\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin-i386-cc\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin-i386-cc\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin-i386-cc\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin-i386-cc\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin-i386-cc\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin-i386-cc\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-arm64-cc\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-arm64-cc\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-arm64-cc\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-arm64-cc\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-arm64-cc\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-arm64-cc\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-arm64-cc\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-arm64-cc\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-arm64-cc\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-arm64-cc\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-arm64-cc\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-arm64-cc\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-arm64-cc\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-arm64-cc\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-arm64-cc\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-x86_64-cc\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-x86_64-cc\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-x86_64-cc\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-x86_64-cc\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-x86_64-cc\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-x86_64-cc\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-x86_64-cc\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-x86_64-cc\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-x86_64-cc\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-x86_64-cc\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-x86_64-cc\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-x86_64-cc\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-x86_64-cc\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-x86_64-cc\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\darwin64-x86_64-cc\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-aarch64\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-aarch64\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-aarch64\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-aarch64\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-aarch64\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-aarch64\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-aarch64\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-aarch64\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-aarch64\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-aarch64\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-aarch64\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-aarch64\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-aarch64\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-aarch64\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-aarch64\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-armv4\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-armv4\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-armv4\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-armv4\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-armv4\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-armv4\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-armv4\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-armv4\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-armv4\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-armv4\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-armv4\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-armv4\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-armv4\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-armv4\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-armv4\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-elf\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-elf\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-elf\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-elf\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-elf\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-elf\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-elf\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-elf\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-elf\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-elf\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-elf\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-elf\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-elf\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-elf\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-elf\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64le\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64le\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64le\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64le\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64le\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64le\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64le\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64le\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64le\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64le\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64le\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64le\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64le\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64le\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-ppc64le\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x32\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x32\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x32\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x32\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x32\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x32\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x32\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x32\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x32\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x32\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x32\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x32\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x32\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x32\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x32\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x86_64\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x86_64\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x86_64\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x86_64\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x86_64\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x86_64\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x86_64\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x86_64\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x86_64\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x86_64\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x86_64\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x86_64\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x86_64\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x86_64\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux-x86_64\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux32-s390x\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux32-s390x\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux32-s390x\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux32-s390x\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux32-s390x\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux32-s390x\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux32-s390x\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux32-s390x\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux32-s390x\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux32-s390x\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux32-s390x\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux32-s390x\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux32-s390x\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux32-s390x\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux32-s390x\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-mips64\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-mips64\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-mips64\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-mips64\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-mips64\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-mips64\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-mips64\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-mips64\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-mips64\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-mips64\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-mips64\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-mips64\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-mips64\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-mips64\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-mips64\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-s390x\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-s390x\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-s390x\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-s390x\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-s390x\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-s390x\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-s390x\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-s390x\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-s390x\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-s390x\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-s390x\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-s390x\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-s390x\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-s390x\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\linux64-s390x\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris-x86-gcc\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris-x86-gcc\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris-x86-gcc\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris-x86-gcc\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris-x86-gcc\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris-x86-gcc\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris-x86-gcc\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris-x86-gcc\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris-x86-gcc\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris-x86-gcc\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris-x86-gcc\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris-x86-gcc\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris-x86-gcc\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris-x86-gcc\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris-x86-gcc\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris64-x86_64-gcc\asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris64-x86_64-gcc\asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris64-x86_64-gcc\asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris64-x86_64-gcc\asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris64-x86_64-gcc\asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris64-x86_64-gcc\asm_avx2\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris64-x86_64-gcc\asm_avx2\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris64-x86_64-gcc\asm_avx2\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris64-x86_64-gcc\asm_avx2\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris64-x86_64-gcc\asm_avx2\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris64-x86_64-gcc\no-asm\crypto\buildinf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris64-x86_64-gcc\no-asm\crypto\include\internal\bn_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris64-x86_64-gcc\no-asm\crypto\include\internal\dso_conf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris64-x86_64-gcc\no-asm\include\progs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\openssl\archs\solaris64-x86_64-gcc\no-asm\include\openssl\opensslconf.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\uv\aix.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\uv\android-ifaddrs.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\uv\bsd.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\uv\darwin.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\uv\errno.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\uv\linux.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\uv\os390.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\uv\posix.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\uv\stdint-msvc2008.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\uv\sunos.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\uv\threadpool.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\uv\tree.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\uv\unix.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\uv\version.h" />
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\.node\nodeDemo\node_modules\node-addon-api\node\uv\win.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\c++\c++StudySln\cmakeDemo\build\ZERO_CHECK.vcxproj">
+      <Project>{453D1DDC-7B19-3458-BF57-3EA1C1436164}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

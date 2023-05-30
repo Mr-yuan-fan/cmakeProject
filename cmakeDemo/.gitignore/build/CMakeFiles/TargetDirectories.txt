@@ -1,0 +1,9 @@
+E:/c++/c++StudySln/cmakeDemo/build/CMakeFiles/ALL_BUILD.dir
+E:/c++/c++StudySln/cmakeDemo/build/CMakeFiles/ZERO_CHECK.dir
+E:/c++/c++StudySln/cmakeDemo/build/code/test/CMakeFiles/processTest.dir
+E:/c++/c++StudySln/cmakeDemo/build/code/test/CMakeFiles/ALL_BUILD.dir
+E:/c++/c++StudySln/cmakeDemo/build/code/source/dll/common/CMakeFiles/common.dir
+E:/c++/c++StudySln/cmakeDemo/build/code/source/dll/algorithm/CMakeFiles/algorithm.dir
+E:/c++/c++StudySln/cmakeDemo/build/code/source/dll/thread/CMakeFiles/thread.dir
+E:/c++/c++StudySln/cmakeDemo/build/code/source/lib/designMode/CMakeFiles/designMode.dir
+E:/c++/c++StudySln/cmakeDemo/build/code/source/.node/cplusExtension/CMakeFiles/cplusExtension.dir

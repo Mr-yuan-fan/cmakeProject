@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\c++\c++StudySln\cmakeDemo\code\source\dll\thread\thread.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\dll\thread\thread.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\source\dll\thread\convert\lock_thread.h">
+      <Filter>include\convert</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\include\dll\thread\i_thread.h">
+      <Filter>public</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\c++\c++StudySln\cmakeDemo\code\source\dll\thread\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{6C478A7A-67CD-3CA2-84A1-B536CFCFD268}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\convert">
+      <UniqueIdentifier>{3838A16D-4E3D-3B19-BB88-7BBDB5C560AD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="public">
+      <UniqueIdentifier>{9158A357-C42E-36FA-8EE2-06F8D35E7952}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{98389157-C817-3DAF-B796-B29CB2889B2B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

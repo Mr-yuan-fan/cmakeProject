@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\c++\c++StudySln\cmakeDemo\code\test\main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\c++\c++StudySln\cmakeDemo\code\test\processTest.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\c++\c++StudySln\cmakeDemo\code\test\dllTest\algorithmTest.cpp">
+      <Filter>source\dllTest</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\c++\c++StudySln\cmakeDemo\code\test\dllTest\commonTest.cpp">
+      <Filter>source\dllTest</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\c++\c++StudySln\cmakeDemo\code\test\libTest\designModelTest.cpp">
+      <Filter>source\libTest</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\c++\c++StudySln\cmakeDemo\code\test\nodeTest\nodeTest.cpp">
+      <Filter>source\nodeTest</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\test\processTest.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\test\dllTest\algorithmTest.h">
+      <Filter>include\dllTest</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\test\dllTest\commonTest.h">
+      <Filter>include\dllTest</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\test\libTest\designModelTest.h">
+      <Filter>include\libTest</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo\code\test\nodeTest\nodeTest.h">
+      <Filter>include\nodeTest</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\c++\c++StudySln\cmakeDemo\code\test\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{6C478A7A-67CD-3CA2-84A1-B536CFCFD268}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\dllTest">
+      <UniqueIdentifier>{BBBF9A2E-497C-3F13-91C6-06C2DF2B9AF2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\libTest">
+      <UniqueIdentifier>{2AA61EFC-429F-3ACA-B916-F4F85B70C1F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\nodeTest">
+      <UniqueIdentifier>{36F25663-3619-3E86-86CC-4273C26A8B7F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{98389157-C817-3DAF-B796-B29CB2889B2B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\dllTest">
+      <UniqueIdentifier>{2CC61BAC-D2A2-32B5-9841-7502BFFD87E2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\libTest">
+      <UniqueIdentifier>{EFAE97AF-FAD6-31BB-89C2-44D887410E95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\nodeTest">
+      <UniqueIdentifier>{8161D989-4133-3861-A2A6-291AAD6CCC32}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

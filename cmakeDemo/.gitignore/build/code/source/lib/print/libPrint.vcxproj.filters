@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\c++\c++StudySln\cmakeDemo2\code\source\lib\print\lib_print.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo2\code\source\lib\print\lib_print.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\c++\c++StudySln\cmakeDemo2\code\include\lib\print\i_lib_print.h">
+      <Filter>public</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\c++\c++StudySln\cmakeDemo2\code\source\lib\print\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{C17B2978-E944-350D-BA53-3FB7BBAF4540}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="public">
+      <UniqueIdentifier>{0EC5326F-5F76-3FBF-B680-DB8F6CF84495}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{0547C02A-5E91-39E5-BF70-FA9389CADF20}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

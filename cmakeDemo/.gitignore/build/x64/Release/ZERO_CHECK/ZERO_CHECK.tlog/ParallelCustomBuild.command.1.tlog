@@ -1,0 +1,10 @@
+^E:\C++\C++STUDYSLN\CMAKEDEMO\BUILD\CMAKEFILES\67920B22036D9D73FDDF4A8B0F20CDE7\GENERATE.STAMP.RULE
+setlocal
+F:\softwarePackages\cmake-3.26.0-rc3-windows-x86_64\cmake-3.26.0-rc3-windows-x86_64\bin\cmake.exe -SE:/c++/c++StudySln/cmakeDemo -BE:/c++/c++StudySln/cmakeDemo/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/c++/c++StudySln/cmakeDemo/build/wellinos8.0.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

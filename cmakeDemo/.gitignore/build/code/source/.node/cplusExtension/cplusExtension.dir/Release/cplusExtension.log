@@ -1,0 +1,4 @@
+﻿  1>Building Custom Rule E:/c++/c++StudySln/cmakeDemo/code/source/.node/cplusExtension/CMakeLists.txt
+  addon.cpp
+    正在创建库 E:/c++/c++StudySln/cmakeDemo/bin/win64/Release/cplusExtension.lib 和对象 E:/c++/c++StudySln/cmakeDemo/bin/win64/Release/cplusExtension.exp
+  cplusExtension.vcxproj -> E:\c++\c++StudySln\cmakeDemo\bin\win64\Release\cplusExtension.node
