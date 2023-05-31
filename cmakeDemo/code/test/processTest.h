@@ -5,6 +5,8 @@
 #include "commonTest.h"
 #include "designModelTest.h"
 #include "nodeTest.h"
+#include "threadTest.h"
+
 
 #include <windows.h>
 
@@ -12,6 +14,7 @@ using namespace ns_algorithm_test;
 using namespace ns_common_test;
 using namespace ns_node_test;
 using namespace ns_designmodel_simplefatory_test;
+using namespace ns_thread_test;
 
 
 BEGINENAMESPACE(ns_process_test)
@@ -37,6 +40,7 @@ private:
 	shared_ptr<CommonTest>         commonTestPtr;
 	shared_ptr<SimpleFatoryTest>   simpleFatoryTestPtr;
 	shared_ptr<NodeTest>           nodeTestPtr;
+	shared_ptr<ThreadTest>         threadTestPtr;
 
 private:
 

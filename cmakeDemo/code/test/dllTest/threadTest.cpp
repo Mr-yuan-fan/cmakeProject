@@ -53,7 +53,7 @@ void ThreadTest::conditionMainThread(int cycle)
 	}
 	
 	m_thread.join();
-	std::cout << "条件变量测试结束 = " << std::endl;
+	std::cout << "条件变量测试结束 " << std::endl;
 }
 
 void ThreadTest::getVector()
