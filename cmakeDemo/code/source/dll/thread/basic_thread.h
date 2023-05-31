@@ -3,14 +3,16 @@
 
 #include <iostream>
 #include <string>
+
+
 #include "i_thread.h"
 #include "dll//common/common_utitly.h"
 
 using namespace std;
 
-BEGINENAMESPACE(ns_thread)
+BEGINENAMESPACE(ns_baisc_thread)
 
-THREAD_API void myThread();
+THREAD_API void simepleThreadCreate1();
 
 ENDNAMESPACE
 
