@@ -24,7 +24,7 @@ private:
 
 };
 
-
+typedef shared_ptr<SimpleFactory>  SimpleFactoryPtr;
 
 ENDNAMESPACE
 

@@ -8,14 +8,16 @@ using namespace ns_algorithm;
 
 BEGINENAMESPACE(ns_algorithm_test)
 
+
 class AlgorithmTest
 {
 public:
 
-	AlgorithmTest() 
+	AlgorithmTest()
 	{
-		init();
+		algorithmPtr = AlgorithmPtr(new Algorithm);
 	};
+
 	~AlgorithmTest() {};
 
 public:
@@ -34,13 +36,10 @@ private:
 
 private:
 
-	void init();
-
-private:
-
-	shared_ptr<Algorithm> algorithmPtr;
+	AlgorithmPtr algorithmPtr;
 };
 
+typedef shared_ptr<AlgorithmTest>  AlgorithmTestPtr;
 
 ENDNAMESPACE
 #endif

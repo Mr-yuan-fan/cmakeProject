@@ -24,6 +24,7 @@ private:
 
 };
 
+typedef shared_ptr<NodeTest>  NodeTestPtr;
 
 ENDNAMESPACE
 #endif

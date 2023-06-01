@@ -35,18 +35,16 @@ public:
 	void allExecute();
 
 private:
-
-	shared_ptr<AlgorithmTest>      algorithmTestPtr;
-	shared_ptr<CommonTest>         commonTestPtr;
-	shared_ptr<SimpleFatoryTest>   simpleFatoryTestPtr;
-	shared_ptr<NodeTest>           nodeTestPtr;
-	shared_ptr<ThreadTest>         threadTestPtr;
+	void init();
 
 private:
 
-	void init();
+	AlgorithmTestPtr algorithmTestPtr;
+	CommonTestPtr commonTestPtr;
+	SimpleFactoryTestPtr simpleFactoryTestPtr;
+	NodeTestPtr nodeTestPtr;
+	ThreadTestPtr threadTestPtr;
 };
-
 
 ENDNAMESPACE
 #endif

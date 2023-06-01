@@ -1,8 +1,8 @@
 #ifndef __THREAD_TEST_H_
 #define __THREAD_TEST_H_
 
-
-#include "dll/common/print.h"
+#include "dll/common/common_utitly.h"
+#include "my_thread_pool_test.h"
 
 #include <thread>
 #include <windows.h>
@@ -10,7 +10,7 @@
 #include <mutex>
 #include <condition_variable>
 
-using namespace ns_common;
+using namespace ns_my_thread_pool_test;
 
 BEGINENAMESPACE(ns_thread_test)
 
@@ -33,13 +33,15 @@ public:
 
 private:
 
-	//主调函数
+	//内部主调函数
 
 	void simpleThreadCreate();
 
 	void conditionMainThread(int cycle);
 
 	bool gNumIsNotZero();
+
+	void threadPoolTest(int num);
 	
 private:
 	
@@ -60,6 +62,7 @@ private:
 	int g_num = 0;
 };
 
+typedef shared_ptr<ThreadTest>  ThreadTestPtr;
 
 ENDNAMESPACE
 #endif

@@ -8,15 +8,15 @@ using namespace ns_lib_simple_factory;
 
 BEGINENAMESPACE(ns_designmodel_simplefatory_test)
 
-class SimpleFatoryTest
+class SimpleFactoryTest
 {
 public:
 
-	SimpleFatoryTest()
+	SimpleFactoryTest()
 	{
-		init();
+		simpleFactoryPtr = SimpleFactoryPtr(new SimpleFactory);
 	};
-	~SimpleFatoryTest() {};
+	~SimpleFactoryTest() {};
 
 public:
 
@@ -28,13 +28,11 @@ private:
 
 private:
 
-	void init();
-
-private:
-
-	shared_ptr<SimpleFactory> simpleFactoryPtr;
+	SimpleFactoryPtr simpleFactoryPtr;
 
 };
+
+typedef shared_ptr<SimpleFactoryTest>  SimpleFactoryTestPtr;
 
 
 ENDNAMESPACE

@@ -1,7 +1,6 @@
 #include "threadTest.h"
 
 using namespace ns_thread_test;
-using namespace ns_common;
 
 
 bool ThreadTest::gNumIsNotZero()
@@ -127,6 +126,22 @@ void ThreadTest::simpleThreadCreate()
 	std::cout << "创建基础线程 结束  " << std::endl;
 }
 
+void ThreadTest::threadPoolTest(int num)
+{
+	std::cout << "线程池测试 开始  " << std::endl;
+
+	ThreadPool<TestTask> threadPool(5);
+
+	for (int i = 0; i < 10; ++i) 
+	{
+		TestTask* tTask = new TestTask();
+		threadPool.append(tTask);
+		delete tTask;
+	}
+	std::cout << "线程池测试 结束  " << std::endl;
+}
+
+
 void ThreadTest::testExecute()
 {
 	cout << "-----------------------------------------\t thread 测试开始 \t\t---------------------------------" << endl;
@@ -134,10 +149,12 @@ void ThreadTest::testExecute()
 	std::cout << "main thread id is: " << std::this_thread::get_id() << std::endl;
 
 	//调用创建线程方法
-	simpleThreadCreate();
+	//simpleThreadCreate();
 
 	//condition条件变量测试
-	conditionMainThread(10);
+	//conditionMainThread(10);
+
+	threadPoolTest(5);
 
 	cout << "-----------------------------------------\t thread 测试结束 \t\t---------------------------------" << endl;
 	cout << endl;

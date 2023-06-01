@@ -4,18 +4,14 @@
 using namespace ns_lib_simple_factory;
 using namespace ns_designmodel_simplefatory_test;
 
-void SimpleFatoryTest::init()
-{
-	simpleFactoryPtr = shared_ptr<SimpleFactory> (new SimpleFactory);
-}
 
-void SimpleFatoryTest::simpleFactoryDemo()
+void SimpleFactoryTest::simpleFactoryDemo()
 {
 	simpleFactoryPtr->demo();
 }
 
 
-void SimpleFatoryTest::testExecute()
+void SimpleFactoryTest::testExecute()
 {
 	cout << "-----------------------------------------\t simpleFactory ²âÊÔ¿ªÊ¼ \t---------------------------------" << endl;
 

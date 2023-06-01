@@ -25,6 +25,7 @@ private:
 
 };
 
+typedef shared_ptr<Algorithm>  AlgorithmPtr;
 
 ENDNAMESPACE
 #endif

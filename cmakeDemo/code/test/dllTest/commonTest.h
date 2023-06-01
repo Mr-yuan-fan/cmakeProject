@@ -27,6 +27,7 @@ private:
 	void commonPrintC();
 };
 
+typedef shared_ptr<CommonTest>  CommonTestPtr;
 
 ENDNAMESPACE
 #endif

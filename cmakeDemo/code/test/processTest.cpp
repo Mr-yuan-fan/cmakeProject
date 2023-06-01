@@ -4,19 +4,18 @@ using namespace ns_process_test;
 
 void ProcessTest::init()
 {
-	algorithmTestPtr = shared_ptr<AlgorithmTest> (new AlgorithmTest);
-	commonTestPtr = shared_ptr<CommonTest>(new CommonTest);
-	simpleFatoryTestPtr = shared_ptr<SimpleFatoryTest>(new SimpleFatoryTest);
-	nodeTestPtr = shared_ptr<NodeTest>(new NodeTest);
-	threadTestPtr = shared_ptr<ThreadTest>(new ThreadTest);
-
+	algorithmTestPtr = AlgorithmTestPtr(new AlgorithmTest);
+	commonTestPtr = CommonTestPtr(new CommonTest);
+	simpleFactoryTestPtr = SimpleFactoryTestPtr(new SimpleFactoryTest);
+	nodeTestPtr = NodeTestPtr(new NodeTest);
+	threadTestPtr = ThreadTestPtr(new ThreadTest);
 }
 
 void ProcessTest::allExecute()
 {
 	//algorithmTestPtr->testExecute();
 	//commonTestPtr->testExecute();
-	//simpleFatoryTestPtr->testExecute();
+	//simpleFactoryTestPtr->testExecute();
 	//nodeTestPtr->testExecute();
 	threadTestPtr->testExecute();
 }
