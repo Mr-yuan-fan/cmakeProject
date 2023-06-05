@@ -7,7 +7,6 @@
 #include "nodeTest.h"
 #include "threadTest.h"
 
-
 #include <windows.h>
 
 using namespace ns_algorithm_test;
@@ -45,6 +44,8 @@ private:
 	NodeTestPtr nodeTestPtr;
 	ThreadTestPtr threadTestPtr;
 };
+
+
 
 ENDNAMESPACE
 #endif

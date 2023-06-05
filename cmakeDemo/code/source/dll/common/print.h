@@ -11,6 +11,7 @@ BEGINENAMESPACE(ns_common)
 
 //两种声明方式，但调用方式一样
 void  COMMON_API commonFuncPrint(string str);
+
 extern "C" void  COMMON_API commonFuncPrintC(string str);
 
 

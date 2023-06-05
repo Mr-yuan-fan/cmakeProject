@@ -2,7 +2,8 @@
 #define __THREAD_TEST_H_
 
 #include "dll/common/common_utitly.h"
-#include "my_thread_pool_test.h"
+#include "my_thread_pool_v1_test.h"
+#include "my_thread_pool_v2_test.h"
 
 #include <thread>
 #include <windows.h>
@@ -41,8 +42,10 @@ private:
 
 	bool gNumIsNotZero();
 
-	void threadPoolTest(int num);
-	
+	void threadPoolV1Test(int num);
+
+	void threadPoolV2Test();
+
 private:
 	
 	//Ïß³Ìº¯Êý

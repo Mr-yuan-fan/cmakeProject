@@ -1,6 +1,7 @@
 #include "threadTest.h"
 
 using namespace ns_thread_test;
+using namespace ns_my_thread_pool_test;
 
 
 bool ThreadTest::gNumIsNotZero()
@@ -47,7 +48,7 @@ void ThreadTest::conditionMainThread(int cycle)
 		std::unique_lock<std::mutex> m_unique_lock(m_mutex);
 		g_num = i + 1;
 	
-		//唤醒当前阻塞的线程. 若又多个，随机唤醒. notify_all可唤醒所有线程
+		//唤醒当前阻塞的线程. 若有多个，随机唤醒. notify_all可唤醒所有线程
 		m_condition.notify_one();
 	}
 	
@@ -126,11 +127,11 @@ void ThreadTest::simpleThreadCreate()
 	std::cout << "创建基础线程 结束  " << std::endl;
 }
 
-void ThreadTest::threadPoolTest(int num)
+void ThreadTest::threadPoolV1Test(int num)
 {
 	std::cout << "线程池测试 开始  " << std::endl;
 
-	ThreadPool<TestTask> threadPool(5);
+	ThreadPoolV1<TestTask> threadPool(5);
 
 	for (int i = 0; i < 10; ++i) 
 	{
@@ -141,6 +142,30 @@ void ThreadTest::threadPoolTest(int num)
 	std::cout << "线程池测试 结束  " << std::endl;
 }
 
+void taskFunc(void* arg)
+{
+	int nNum = *(int*)arg;
+	cout << "thread: " << std::this_thread::get_id() << ", number=" << nNum << endl;
+	std::this_thread::sleep_for(std::chrono::seconds(1));
+}
+
+void ThreadTest::threadPoolV2Test()
+{
+	ThreadPoolV2 pool(5, 10);
+	int i;
+	// 往任务队列中添加100个任务
+	for (i = 0; i < 100; ++i)
+	{
+		int* pNum = new int(i + 100);
+		pool.Add(taskFunc, (void*)pNum);
+	}
+	for (; i < 200; ++i)
+	{
+		std::this_thread::sleep_for(std::chrono::seconds(1));
+		int* pNum = new int(i + 100);
+		pool.Add(taskFunc, (void*)pNum);
+	}
+}
 
 void ThreadTest::testExecute()
 {
@@ -154,7 +179,8 @@ void ThreadTest::testExecute()
 	//condition条件变量测试
 	//conditionMainThread(10);
 
-	threadPoolTest(5);
+	//threadPoolV1Test(5);
+	threadPoolV2Test();
 
 	cout << "-----------------------------------------\t thread 测试结束 \t\t---------------------------------" << endl;
 	cout << endl;
