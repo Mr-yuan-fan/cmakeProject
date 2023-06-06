@@ -8,25 +8,21 @@ const int NUMBER = 2;
 
 ThreadPoolV2::ThreadPoolV2(int min, int max)
 {
-	do
+	minNum = min;
+	maxNum = max;
+	busyNum = 0;
+	liveNum = min;
+	exitNum = 0;
+
+	shutdown = false;
+	// this:传递给线程入口函数的参数，即线程池
+	managerID = thread(manager, this);
+
+	threadIDs.resize(max);
+	for (int i = 0; i < min; ++i)
 	{
-		minNum = min;
-		maxNum = max;
-		busyNum = 0;
-		liveNum = min;
-		exitNum = 0;
-
-		shutdown = false;
-		// this:传递给线程入口函数的参数，即线程池
-		managerID = thread(manager, this);
-
-		threadIDs.resize(max);
-		for (int i = 0; i < min; ++i)
-		{
-			threadIDs[i] = thread(worker, this);
-		}
-		return;
-	} while (0);
+		threadIDs[i] = thread(worker, this);
+	}
 }
 
 ThreadPoolV2::~ThreadPoolV2()

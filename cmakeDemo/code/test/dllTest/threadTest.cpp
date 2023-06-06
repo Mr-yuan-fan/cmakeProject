@@ -131,11 +131,10 @@ void ThreadTest::threadPoolV1Test(int num)
 {
 	std::cout << "线程池测试 开始  " << std::endl;
 
-	ThreadPoolV1<TestTask> threadPool(5);
-
+	ThreadPoolV1<TestTaskV1> threadPool(num);
 	for (int i = 0; i < 10; ++i) 
 	{
-		TestTask* tTask = new TestTask();
+		TestTaskV1* tTask = new TestTaskV1();
 		threadPool.append(tTask);
 		delete tTask;
 	}
@@ -167,6 +166,24 @@ void ThreadTest::threadPoolV2Test()
 	}
 }
 
+void ThreadTest::threadPoolV3Test()
+{
+	ThreadPoolV3ByHandWrite pool(5, 10);
+	int i;
+	// 往任务队列中添加50个任务
+	for (i = 0; i < 50; ++i)
+	{
+		int* pNum = new int(i + 100);
+		pool.appendTask(taskFunc, (void*)pNum);
+	}
+	for (; i < 70; ++i)
+	{
+		std::this_thread::sleep_for(std::chrono::seconds(1));
+		int* pNum = new int(i + 100);
+		pool.appendTask(taskFunc, (void*)pNum);
+	}
+}
+
 void ThreadTest::testExecute()
 {
 	cout << "-----------------------------------------\t thread 测试开始 \t\t---------------------------------" << endl;
@@ -179,8 +196,9 @@ void ThreadTest::testExecute()
 	//condition条件变量测试
 	//conditionMainThread(10);
 
-	//threadPoolV1Test(5);
-	threadPoolV2Test();
+	threadPoolV1Test(2);
+	//threadPoolV2Test();
+	//threadPoolV3Test();
 
 	cout << "-----------------------------------------\t thread 测试结束 \t\t---------------------------------" << endl;
 	cout << endl;

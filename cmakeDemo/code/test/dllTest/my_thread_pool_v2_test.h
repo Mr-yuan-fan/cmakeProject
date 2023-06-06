@@ -13,12 +13,10 @@
 #include "dll//common/common_utitly.h"
 
 using namespace std;
+using namespace std::literals::chrono_literals;
 
 BEGINENAMESPACE(ns_my_thread_pool_test)
 
-
-using namespace std;
-using namespace std::literals::chrono_literals;
 using callback = void(*)(void*);
 
 // 任务队列类

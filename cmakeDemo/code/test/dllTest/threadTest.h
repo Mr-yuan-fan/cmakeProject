@@ -4,6 +4,7 @@
 #include "dll/common/common_utitly.h"
 #include "my_thread_pool_v1_test.h"
 #include "my_thread_pool_v2_test.h"
+#include "my_thread_pool_v3_handwrite_test.h"
 
 #include <thread>
 #include <windows.h>
@@ -45,6 +46,8 @@ private:
 	void threadPoolV1Test(int num);
 
 	void threadPoolV2Test();
+
+	void threadPoolV3Test();
 
 private:
 	

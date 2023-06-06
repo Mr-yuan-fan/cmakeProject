@@ -4,3 +4,4 @@
 ### 4:commit thread pool v1 -at 2023/06/01
 ### 5:delete dll/source/thread/basic_*.h  -at 2023/06/01
 ### 6:commit thread pool v2 -at 2023/06/05
+### 6:repaire thread pool v1 ; commoit thread pool v3 -at 2023/06/06

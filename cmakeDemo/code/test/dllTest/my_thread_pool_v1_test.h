@@ -19,19 +19,19 @@ BEGINENAMESPACE(ns_my_thread_pool_test)
 
 #define MAX_THREAD_NUM 100
 
-class TestTask
+class TestTaskV1
 {
 public:
 	void process()
 	{
 		cout << "process.........thread id = " <<this_thread::get_id()<< endl;
-		//测试任务数量
-		long i = 1000;
-		while (i != 0)
-		{
-			int j = sqrt(i);
-			i--;
-		}
+		////测试任务数量
+		//long i = 10;
+		//while (i != 0)
+		//{
+		//	int j = sqrt(i);
+		//	i--;
+		//}
 	}
 };
 
@@ -50,6 +50,7 @@ private:
 	//工作线程需要运行的函数,不断的从任务队列中取出并执行
 	static void *worker(void *arg);
 	void run();
+	bool getThreadPoolStatus();
 
 private:
 	std::vector<std::thread> work_threads; //工作线程
@@ -77,13 +78,27 @@ ThreadPoolV1<T>::ThreadPoolV1(int number):stop(false)
 template <typename T>
 inline ThreadPoolV1<T>::~ThreadPoolV1()
 {
-
+	std::this_thread::sleep_for(std::chrono::seconds(1));
 	std::unique_lock<std::mutex> lock(queue_mutex);
 	stop = true;
+	//一定要解锁，否则会死锁
+	lock.unlock();
+
 	condition.notify_all();
 	for (auto &ww : work_threads)
-		ww.join();//可以在析构函数中join
+	{
+		if(ww.joinable()) ww.join();//可以在析构函数中join
+	}
+		
 }
+
+template<class T>
+bool ThreadPoolV1<T>::getThreadPoolStatus()
+{
+	bool res = stop;
+	return res;
+}
+
 
 //添加任务
 template <typename T>
@@ -93,7 +108,7 @@ bool ThreadPoolV1<T>::append(T *request)
 	queue_mutex.lock();//同一个类的锁
 	tasks_queue.push(request);
 	queue_mutex.unlock();
-	condition.notify_one(); //线程池添加进去了任务，自然要通知等待的线程
+	condition.notify_all(); //线程池添加进去了任务，自然要通知等待的线程
 	return true;
 }
 
@@ -101,7 +116,7 @@ bool ThreadPoolV1<T>::append(T *request)
 template <typename T>
 void *ThreadPoolV1<T>::worker(void *arg)
 {
-	ThreadPoolV1 *pool = (ThreadPoolV1 *)arg;
+	ThreadPoolV1 *pool = static_cast<ThreadPoolV1 *>(arg);
 	pool->run();//线程运行
 	return pool;
 }
@@ -109,21 +124,19 @@ void *ThreadPoolV1<T>::worker(void *arg)
 template <typename T>
 void ThreadPoolV1<T>::run()
 {
-	
 	while (!stop)
 	{
 		std::unique_lock<std::mutex> lk(this->queue_mutex);
-		std::cout << "run thread id = : " << this_thread::get_id() << std::endl;
-		/*　unique_lock() 出作用域会自动解锁　*/
-		this->condition.wait(lk, [this] { return !this->tasks_queue.empty(); });
-		//如果任务为空，则wait，就停下来等待唤醒
-		//需要有任务，才启动该线程，不然就休眠
-		if (this->tasks_queue.empty())//任务为空，双重保障
+
+		//不要使用lamda表达式；这里使用的话，只会根据线程数量去执行对应的任务，其余任务不会执行
+		//this->condition.wait(lk, [this] { return !this->tasks_queue.empty() && this->stop; });
+
+		while (this->tasks_queue.empty() && !this->stop)
 		{
-			assert(0 && "断了");//实际上不会运行到这一步，因为任务为空，wait就休眠了。
-			continue;
+			this->condition.wait(lk);
 		}
-		else
+
+		if (!this->tasks_queue.empty())
 		{
 			T *request = tasks_queue.front();
 			tasks_queue.pop();

@@ -14,7 +14,7 @@ void ProcessTest::init()
 void ProcessTest::allExecute()
 {
 	//algorithmTestPtr->testExecute();
-	commonTestPtr->testExecute();
+	//commonTestPtr->testExecute();
 	//simpleFactoryTestPtr->testExecute();
 	//nodeTestPtr->testExecute();
 	threadTestPtr->testExecute();
