@@ -17,8 +17,5 @@ using namespace std;
 
 #define int32_t int
 
-#define BEGINENAMESPACE( name ) namespace name{
-
-#define ENDNAMESPACE }
 
 #endif

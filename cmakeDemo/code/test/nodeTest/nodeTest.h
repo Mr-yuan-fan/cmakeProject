@@ -5,7 +5,7 @@
 #include "lib/designMode/simpleFactory.h"
 
 
-BEGINENAMESPACE(ns_node_test)
+BEGINE_NAMESPACE(ns_node_test)
 
 class NodeTest
 {
@@ -26,5 +26,5 @@ private:
 
 typedef shared_ptr<NodeTest>  NodeTestPtr;
 
-ENDNAMESPACE
+END_NAMESPACE
 #endif

@@ -14,7 +14,7 @@
 
 using namespace ns_my_thread_pool_test;
 
-BEGINENAMESPACE(ns_thread_test)
+BEGINE_NAMESPACE(ns_thread_test)
 
 class ThreadTest
 {
@@ -70,5 +70,5 @@ private:
 
 typedef shared_ptr<ThreadTest>  ThreadTestPtr;
 
-ENDNAMESPACE
+END_NAMESPACE
 #endif

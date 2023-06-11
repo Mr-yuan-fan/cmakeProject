@@ -6,7 +6,7 @@
 
 using namespace ns_lib_simple_factory;
 
-BEGINENAMESPACE(ns_designmodel_simplefatory_test)
+BEGINE_NAMESPACE(ns_designmodel_simplefatory_test)
 
 class SimpleFactoryTest
 {
@@ -35,5 +35,5 @@ private:
 typedef shared_ptr<SimpleFactoryTest>  SimpleFactoryTestPtr;
 
 
-ENDNAMESPACE
+END_NAMESPACE
 #endif

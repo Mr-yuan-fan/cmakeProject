@@ -6,13 +6,12 @@
 #include <string>
 using namespace std;
 
-#ifdef THREAD_API_FLAG
 #ifndef THREAD_API
+#ifdef THREAD_API_FLAG
 #define THREAD_API __declspec(dllexport)
-#endif // !THREAD
 #else
 #define THREAD_API __declspec(dllimport)
 #endif // !THREAD_API_FLAG
-
+#endif 
 
 #endif

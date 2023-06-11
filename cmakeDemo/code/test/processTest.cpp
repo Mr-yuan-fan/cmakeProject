@@ -9,6 +9,7 @@ void ProcessTest::init()
 	simpleFactoryTestPtr = SimpleFactoryTestPtr(new SimpleFactoryTest);
 	nodeTestPtr = NodeTestPtr(new NodeTest);
 	threadTestPtr = ThreadTestPtr(new ThreadTest);
+	componentTestPtr = ComponentTestPtr(new ComponentTest);
 }
 
 void ProcessTest::allExecute()
@@ -17,6 +18,9 @@ void ProcessTest::allExecute()
 	//commonTestPtr->testExecute();
 	//simpleFactoryTestPtr->testExecute();
 	//nodeTestPtr->testExecute();
-	threadTestPtr->testExecute();
+	//threadTestPtr->testExecute();
+	componentTestPtr->testExecute();
+
+
 }
 

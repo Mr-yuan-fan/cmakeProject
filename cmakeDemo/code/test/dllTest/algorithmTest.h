@@ -6,7 +6,7 @@
 
 using namespace ns_algorithm;
 
-BEGINENAMESPACE(ns_algorithm_test)
+BEGINE_NAMESPACE(ns_algorithm_test)
 
 
 class AlgorithmTest
@@ -41,5 +41,5 @@ private:
 
 typedef shared_ptr<AlgorithmTest>  AlgorithmTestPtr;
 
-ENDNAMESPACE
+END_NAMESPACE
 #endif

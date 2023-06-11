@@ -8,7 +8,7 @@
 
 using namespace ns_common;
 
-BEGINENAMESPACE(ns_common_test)
+BEGINE_NAMESPACE(ns_common_test)
 
 class CommonTest
 {
@@ -29,5 +29,5 @@ private:
 
 typedef shared_ptr<CommonTest>  CommonTestPtr;
 
-ENDNAMESPACE
+END_NAMESPACE
 #endif

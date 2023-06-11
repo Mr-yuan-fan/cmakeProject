@@ -14,11 +14,11 @@
 
 
 #include "i_thread.h"
-#include "dll//common/common_utitly.h"
+#include  "common.h"
 
 using namespace std;
 
-BEGINENAMESPACE(ns_thread)
+BEGINE_NAMESPACE(ns_thread)
 class THREAD_API MThread
 {
 public:
@@ -33,6 +33,6 @@ private:
 
 };
 
-ENDNAMESPACE
+END_NAMESPACE
 
 #endif

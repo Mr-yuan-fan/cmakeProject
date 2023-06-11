@@ -10,8 +10,6 @@ using namespace ns_process_test;
 
 int main()
 {
-
-
 	ProcessTest pt;
 	pt.allExecute();	
 

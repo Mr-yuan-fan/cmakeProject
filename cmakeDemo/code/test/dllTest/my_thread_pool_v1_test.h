@@ -11,11 +11,11 @@
 #include <queue>
 #include<assert.h>
 
-#include "dll//common/common_utitly.h"
+#include  "common.h"
 
 using namespace std;
 
-BEGINENAMESPACE(ns_my_thread_pool_test)
+BEGINE_NAMESPACE(ns_my_thread_pool_test)
 
 #define MAX_THREAD_NUM 100
 
@@ -147,6 +147,6 @@ void ThreadPoolV1<T>::run()
 }
 
 
-ENDNAMESPACE
+END_NAMESPACE
 
 #endif

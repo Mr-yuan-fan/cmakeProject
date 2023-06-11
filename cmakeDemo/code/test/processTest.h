@@ -6,6 +6,7 @@
 #include "designModelTest.h"
 #include "nodeTest.h"
 #include "threadTest.h"
+#include "componentTest.h"
 
 #include <windows.h>
 
@@ -14,9 +15,10 @@ using namespace ns_common_test;
 using namespace ns_node_test;
 using namespace ns_designmodel_simplefatory_test;
 using namespace ns_thread_test;
+using namespace ns_component_test;
 
 
-BEGINENAMESPACE(ns_process_test)
+BEGINE_NAMESPACE(ns_process_test)
 
 class ProcessTest
 {
@@ -43,11 +45,13 @@ private:
 	SimpleFactoryTestPtr simpleFactoryTestPtr;
 	NodeTestPtr nodeTestPtr;
 	ThreadTestPtr threadTestPtr;
+	ComponentTestPtr componentTestPtr;
+
 };
 
 
 
-ENDNAMESPACE
+END_NAMESPACE
 #endif
 
 

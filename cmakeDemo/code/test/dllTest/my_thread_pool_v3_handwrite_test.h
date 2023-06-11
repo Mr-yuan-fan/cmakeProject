@@ -9,13 +9,12 @@
 #include <condition_variable>
 #include <queue>
 
-
-#include "dll//common/common_utitly.h"
+#include  "common.h"
 
 using namespace std;
 using namespace std::literals::chrono_literals;
 
-BEGINENAMESPACE(ns_my_thread_pool_test)
+BEGINE_NAMESPACE(ns_my_thread_pool_test)
 
 using callbackFunc = void(*)(void *);
 
@@ -67,5 +66,5 @@ using namespace std;
 
 
 
-ENDNAMESPACE
+END_NAMESPACE
 #endif

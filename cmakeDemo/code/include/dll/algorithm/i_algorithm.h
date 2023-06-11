@@ -5,12 +5,12 @@
 #include <string>
 using namespace std;
 
-#ifdef ALGORITHM_API_FLAG
 #ifndef ALGORITHM_API
+#ifdef ALGORITHM_API_FLAG
 #define ALGORITHM_API __declspec(dllexport)
-#endif // !ALGORITHM_API
 #else
 #define ALGORITHM_API __declspec(dllimport)
 #endif // !ALGORITHM_API_FLAG
+#endif // !ALGORITHM_API
 
 #endif

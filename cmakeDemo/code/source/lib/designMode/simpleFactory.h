@@ -3,12 +3,12 @@
 
 #include <iostream>
 #include <string>
-#include "dll//common/common_utitly.h"
+#include  "common.h"
 
 
 using namespace std;
 
-BEGINENAMESPACE(ns_lib_simple_factory)
+BEGINE_NAMESPACE(ns_lib_simple_factory)
 
 class SimpleFactory
 {
@@ -26,6 +26,6 @@ private:
 
 typedef shared_ptr<SimpleFactory>  SimpleFactoryPtr;
 
-ENDNAMESPACE
+END_NAMESPACE
 
 #endif

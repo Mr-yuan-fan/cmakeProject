@@ -1,6 +1,6 @@
 #include "print.h"
 
-BEGINENAMESPACE(ns_common)
+BEGINE_NAMESPACE(ns_common)
 
 void commonFuncPrint(string str)
 {
@@ -12,4 +12,4 @@ void commonFuncPrintC(string str)
 	cout << " common²âÊÔ£ºthis is print by common module func , call style is C; content is :" << str << endl;
 }
 
-ENDNAMESPACE
+END_NAMESPACE
