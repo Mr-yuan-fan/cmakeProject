@@ -12,6 +12,8 @@ using namespace std;
 
 BEGINE_NAMESPACE(framework_common)
 
+FRAMEWORK_COMMON_API string getModulePath(string dllPath);
+
 FRAMEWORK_COMMON_API bool loadLibrary(vector<string> dllPath);
 
 template<class T>

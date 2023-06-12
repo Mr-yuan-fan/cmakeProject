@@ -1,11 +1,11 @@
 #include "commonTest.h"
+#include "framework_common_utitly.h"
 
 using namespace ns_common_test;
 using namespace ns_common;
+using namespace framework_common;
 
 
-#define MAX_MODULE_PATH 1000
-#define DOUBLE_QUOTATION_MARKS "\\"
 #define COMMON_DLL_DEFINE "common.dll"
 
 void CommonTest::commonPrint()
@@ -15,14 +15,7 @@ void CommonTest::commonPrint()
 
 void CommonTest::commonPrintC()
 {
-	char cModulePath[MAX_MODULE_PATH];
-	GetModuleFileName(nullptr, cModulePath, MAX_MODULE_PATH);
-
-	string modulePathStr = cModulePath;
-	int32_t index = modulePathStr.find_last_of(DOUBLE_QUOTATION_MARKS);
-
-	string basePath = modulePathStr.substr(0, index);
-	string commonDllPath = basePath + "\\" + COMMON_DLL_DEFINE;
+	string commonDllPath = getModulePath(COMMON_DLL_DEFINE);
 
 	HMODULE handle = LoadLibrary(commonDllPath.c_str());
 	typedef void(*commonPrintC)(string str);

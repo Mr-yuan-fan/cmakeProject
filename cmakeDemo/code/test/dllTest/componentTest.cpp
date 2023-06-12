@@ -11,12 +11,15 @@ using namespace framework_common;
 using namespace ns_component_test;
 using namespace std;
 
-#define REALTIME_DB_DLL_ABSOLUTE_PATH "E:\\programming\\c++\\mainStudySln\\cmakeDemo\\bin\\win64\\Debug\\realtimedb.dll"
+#define REALTIME_DB_DLL "realtimedb.dll"
 
 void ComponentTest::realtimedbComTest()
 {
 	vector<string> dllPath;
-	dllPath.push_back(REALTIME_DB_DLL_ABSOLUTE_PATH);
+
+	//获取指定dll绝对路径
+	string realtimeDllPath = getModulePath(REALTIME_DB_DLL);
+	dllPath.push_back(realtimeDllPath);
 
 	//调用框架方法
 	loadLibrary(dllPath);

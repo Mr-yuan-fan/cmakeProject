@@ -1,6 +1,6 @@
 #include "realtime.h"
 
-BEGINE_NAMESPACE(ns_realtimedb)
+using namespace ns_realtimedb;
 
 COMPONENT_AUTO_REGISTER(RealtimeDB)
 
@@ -29,6 +29,3 @@ int RealtimeDB::add(int a, int b)
 	return a + b;
 }
 
-
-
-END_NAMESPACE

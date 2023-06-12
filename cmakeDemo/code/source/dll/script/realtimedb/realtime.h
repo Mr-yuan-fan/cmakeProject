@@ -30,7 +30,6 @@ public:
 	{
 		return COM_ID_REALTIMEDB;
 	}
-
 };
 
 END_NAMESPACE
