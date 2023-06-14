@@ -3,7 +3,7 @@
 #include <windows.h>
 
 using namespace ns_node_test;
-
+using namespace std;
 
 
 void NodeTest::executeNode()

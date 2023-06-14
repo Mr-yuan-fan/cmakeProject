@@ -4,6 +4,7 @@
 #include <vector>
 #include <deque>
 #include <string>
+#include <list>
 
 using namespace ns_stl_test;
 
@@ -324,7 +325,28 @@ void StlTest::stlForwardList()
 void StlTest::stlList()
 {
 	//list双向链表，是序列容器，允许在序列中的任何地方进行常数时间插入和擦除操作，并在两个方向上进行迭代, 可以高效地进行插入删除元素。
-	//list 容器的元素并不是连续存储的，所以该容器迭代器中，必须包含一个可以指向 list 容器的指针，
+	//list 容器的元素并不是连续存储的，所以该容器迭代器中，必须包含一个可以指向 list 容器的指针。
+	list<int> List;
+	List.push_back(1);
+	List.push_back(1);
+	List.push_back(3);
+	List.push_back(1);
+	List.push_back(1);
+	List.push_back(5);
+	List.push_back(1);
+	List.push_back(1);
+	for (list<int>::iterator i = List.begin(); i != List.end();) {
+		if (*i == 1) {
+			i = List.erase(i);//必须给迭代器重新赋值，因为删除后，迭代器会失效。，会指向下一个元素的迭代器。
+			//List.erase(i++); //也可以这样调用
+		}
+		else
+		{
+			++i;
+		}
+	}
+
+	List.remove(1); //一次性删除所有为1的元素
 }
 
 void StlTest::stlStack()

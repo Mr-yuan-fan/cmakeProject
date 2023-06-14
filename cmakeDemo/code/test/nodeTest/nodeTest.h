@@ -1,9 +1,8 @@
 #ifndef __NODE_TEST_H_
 #define __NODE_TEST_H_
 
-
-#include "lib/designMode/simpleFactory.h"
-
+#include "common.h"
+#include <iostream>
 
 BEGINE_NAMESPACE(ns_node_test)
 
@@ -24,7 +23,7 @@ private:
 
 };
 
-typedef shared_ptr<NodeTest>  NodeTestPtr;
+typedef std::shared_ptr<NodeTest>  NodeTestPtr;
 
 END_NAMESPACE
 #endif

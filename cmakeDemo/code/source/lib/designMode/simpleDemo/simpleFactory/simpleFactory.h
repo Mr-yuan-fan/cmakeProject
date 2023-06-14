@@ -5,16 +5,17 @@
 #include <string>
 #include  "common.h"
 
-
 using namespace std;
 
+BEGINE_NAMESPACE(ns_lib_simple_demo)
 BEGINE_NAMESPACE(ns_lib_simple_factory)
 
-class SimpleFactory
+
+class SimpleDemoSimpleFactory
 {
 public:
-	SimpleFactory() {};
-	~SimpleFactory() {};
+	SimpleDemoSimpleFactory() {};
+	~SimpleDemoSimpleFactory() {};
 
 public:
 
@@ -24,8 +25,10 @@ private:
 
 };
 
-typedef shared_ptr<SimpleFactory>  SimpleFactoryPtr;
+typedef shared_ptr<SimpleDemoSimpleFactory>  SimpleDemoSimpleFactorySimpleFactoryPtr;
 
+
+END_NAMESPACE
 END_NAMESPACE
 
 #endif
