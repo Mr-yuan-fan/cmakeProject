@@ -2,6 +2,85 @@
 
 using namespace ns_designmodel_simple_demo_template_method_test;
 
+void SimpleDemoDesignModelTest::simpleFactory()
+{
+	cout << "this is 简单工厂模式 : " << endl;
+
+	SimpleDemoFactory* simpleDemoFactoryPtr = new SimpleDemoFootballFactory();
+	SimpleDemoProduct* simpleDemoProductPtr = simpleDemoFactoryPtr->createProduct();
+	simpleDemoProductPtr->show();
+
+	delete simpleDemoFactoryPtr;
+	delete simpleDemoProductPtr;
+
+	simpleDemoFactoryPtr = new SimpleDemoLolFactory();
+	simpleDemoProductPtr = simpleDemoFactoryPtr->createProduct();
+	simpleDemoProductPtr->show();
+
+	delete simpleDemoFactoryPtr;
+	delete simpleDemoProductPtr;
+
+	simpleDemoFactoryPtr = nullptr ;
+	simpleDemoProductPtr = nullptr;
+
+	cout << endl;
+}
+
+void SimpleDemoDesignModelTest::bridgingModelTest()
+{
+	cout << "this is 桥接模式 : " << endl;
+
+	SimpleDemoIDraw* simpleDemoDrawRedPtr = new SimpleDemoDrawRed();
+	SimpleDemoIDraw* simpleDemoDrawBlackPtr = new SimpleDemoDrawBlack();
+
+	SimpleDemoIShape* simpleDemoCirclePtr = new SimpleDemoCircle(simpleDemoDrawRedPtr);
+	simpleDemoCirclePtr->update();
+
+	SimpleDemoIShape* simpleDemoRectanglePtr = new SimpleDemoRectangle(simpleDemoDrawBlackPtr);
+	simpleDemoRectanglePtr->update();
+
+	delete simpleDemoDrawRedPtr;
+	delete simpleDemoDrawBlackPtr;
+	delete simpleDemoCirclePtr;
+	delete simpleDemoRectanglePtr;
+
+	cout << endl;
+}
+
+void SimpleDemoDesignModelTest::decoratorModelTest()
+{
+	cout << "this is 装饰器模式 : " << endl;
+
+	ISimpleDemoDecorator* iSimpleDemoDecoratorCarPtr = new SimpleDemoDecoratorCarGame();
+	ISimpleDemoDecorator* iSimpleDemoDecoratorLolPtr = new SimpleDemoDecoratorLolGame();
+
+	iSimpleDemoDecoratorCarPtr->skill(); //只会汽车游戏
+	iSimpleDemoDecoratorLolPtr->skill();//只会LOL游戏
+
+	ISimpleDemoDecorator* iSimpleDemoDecoratorBasketballWithCarGamePtr = new SimpleDemoDecoratorBasketballGame(iSimpleDemoDecoratorCarPtr);
+	iSimpleDemoDecoratorBasketballWithCarGamePtr->skill(); //既会篮球，又会汽车
+
+	ISimpleDemoDecorator* iSimpleDemoDecoratorBasketballWithLolGamePtr = new SimpleDemoDecoratorBasketballGame(iSimpleDemoDecoratorLolPtr);
+	iSimpleDemoDecoratorBasketballWithLolGamePtr->skill(); //既会篮球，又会LOL
+
+	ISimpleDemoDecorator* iSimpleDemoDecoratorFootballGamePtr = new SimpleDemoDecoratorFootballGame(iSimpleDemoDecoratorBasketballWithCarGamePtr);
+	iSimpleDemoDecoratorFootballGamePtr->skill(); //既会足球，篮球，又会汽车,
+
+	delete iSimpleDemoDecoratorCarPtr;
+	delete iSimpleDemoDecoratorLolPtr;
+	delete iSimpleDemoDecoratorBasketballWithCarGamePtr;
+	delete iSimpleDemoDecoratorBasketballWithLolGamePtr;
+	delete iSimpleDemoDecoratorFootballGamePtr;
+
+	iSimpleDemoDecoratorCarPtr = nullptr;
+	iSimpleDemoDecoratorLolPtr = nullptr;
+	iSimpleDemoDecoratorBasketballWithCarGamePtr = nullptr;
+	iSimpleDemoDecoratorBasketballWithLolGamePtr = nullptr;
+	iSimpleDemoDecoratorFootballGamePtr = nullptr;
+
+	cout << endl;
+}
+
 void SimpleDemoDesignModelTest::observevModelTest()
 {
 	cout << "this is 观察者模式 : " << endl;
@@ -67,14 +146,17 @@ void SimpleDemoDesignModelTest::testExecute()
 {
 	cout << "-----------------------------------------\t simpleDemo 设计模式 测试开始 \t---------------------------------" << endl;
 
-	//模板方法
-	templateMethodTest();
+	templateMethodTest();//模板方法
 
-	//策略模式
-	strategyPatternTest();
+	strategyPatternTest();//策略模式
 
-	//观察者模式
-	observevModelTest();
+	observevModelTest();//观察者模式
+
+	decoratorModelTest();//装饰器模式
+	
+	bridgingModelTest();//桥接模式
+
+	simpleFactory();//简单工厂模式
 
 	cout << "-----------------------------------------\t simpleDemo 设计模式 测试结束 \t---------------------------------" << endl;
 	cout << endl;

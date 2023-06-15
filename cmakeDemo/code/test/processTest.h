@@ -44,11 +44,12 @@ private:
 
 	AlgorithmTestPtr       algorithmTestPtr;
 	CommonTestPtr          commonTestPtr;
-	SimpleDemoDesignModelTestPtr   simpleDemoDesignModelTestPtr;
 	NodeTestPtr            nodeTestPtr;
 	ThreadTestPtr          threadTestPtr;
 	ComponentTestPtr       componentTestPtr;
 	StlTestPtr             stlTestPtr;
+
+	SimpleDemoDesignModelTestPtr   simpleDemoDesignModelTestPtr;
 };
 
 
