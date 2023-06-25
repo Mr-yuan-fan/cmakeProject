@@ -14,7 +14,7 @@
 using namespace ns_algorithm_test;
 using namespace ns_common_test;
 using namespace ns_node_test;
-using namespace ns_designmodel_simple_demo_template_method_test;
+using namespace ns_designmodel_simple_demo_test;
 using namespace ns_thread_test;
 using namespace ns_component_test;
 using namespace ns_stl_test;

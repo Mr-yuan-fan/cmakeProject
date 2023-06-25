@@ -22,16 +22,24 @@
 #include "lib/designMode/simpleDemo/decoratorModel/simpleDemoDecoratorLolGame.h"
 
 //simple demo 桥接模式
-#include "lib/designMode/simpleDemo/bridgingMode/circle.h"
-#include "lib/designMode/simpleDemo/bridgingMode/rectangle.h"
-#include "lib/designMode/simpleDemo/bridgingMode/drawBlack.h"
-#include "lib/designMode/simpleDemo/bridgingMode/drawRed.h"
+#include "lib/designMode/simpleDemo/bridgingModel/circle.h"
+#include "lib/designMode/simpleDemo/bridgingModel/rectangle.h"
+#include "lib/designMode/simpleDemo/bridgingModel/drawBlack.h"
+#include "lib/designMode/simpleDemo/bridgingModel/drawRed.h"
 
 //简单工厂模式
 #include "lib/designMode/simpleDemo/simpleFactory/footballFactory.h"
 #include "lib/designMode/simpleDemo/simpleFactory/footballProduct.h"
 #include "lib/designMode/simpleDemo/simpleFactory/lolFactory.h"
 #include "lib/designMode/simpleDemo/simpleFactory/lolProduct.h"
+
+//原型模式
+#include "lib/designMode/simpleDemo/prototypeModel/simpleDemoPrototypeChild.h"
+
+//建造者模式
+#include "lib/designMode/simpleDemo/builderModel/simpleDemoBuilderModelMathTeacherBuild.h"
+#include "lib/designMode/simpleDemo/builderModel/simpleDemoBuilderModelChineseTeacherBuild.h"
+#include "lib/designMode/simpleDemo/builderModel/simpleDemoBuilderDirector.h"
 
 using namespace ns_lib_simple_demo;
 using namespace ns_lib_template_method;
@@ -40,8 +48,10 @@ using namespace ns_lib_observer_method;
 using namespace ns_lib_decorator_model;
 using namespace ns_lib_bridging_model;
 using namespace ns_lib_simplefactory_model;
+using namespace ns_lib_prototype_model;
+using namespace ns_lib_builder_model;
 
-BEGINE_NAMESPACE(ns_designmodel_simple_demo_template_method_test)
+BEGINE_NAMESPACE(ns_designmodel_simple_demo_test)
 
 class SimpleDemoDesignModelTest
 {
@@ -67,6 +77,10 @@ private:
 	void bridgingModelTest(); //桥接模式
 
 	void simpleFactory(); //简单工厂模式
+
+	void prototypeModel(); //原型模式
+
+	void builderModel(); //建造者模式
 
 private:
 

@@ -1,6 +1,41 @@
 #include "simpleDemoDesignModelTest.h"
 
-using namespace ns_designmodel_simple_demo_template_method_test;
+using namespace ns_designmodel_simple_demo_test;
+
+void SimpleDemoDesignModelTest::builderModel()
+{
+	cout << "this is 建造者模式 : " << endl;
+
+	SimpleDemoBuilderModelAbstractorTeacherBuild* simpleDemoBuilderModelAbstractorTeacherBuildPtr1 = new SimpleDemoBuilderModelChineseTeacherBuild();
+	SimpleDemoBuilderModelDirector* simpleDemoBuilderModelDirectorPtr1 = new SimpleDemoBuilderModelDirector(simpleDemoBuilderModelAbstractorTeacherBuildPtr1);
+
+	delete simpleDemoBuilderModelAbstractorTeacherBuildPtr1;
+	delete simpleDemoBuilderModelDirectorPtr1;
+
+	SimpleDemoBuilderModelAbstractorTeacherBuild* simpleDemoBuilderModelAbstractorTeacherBuildPtr2 = new SimpleDemoBuilderModelMathTeacherBuild();
+	SimpleDemoBuilderModelDirector* simpleDemoBuilderModelDirectorPtr2 = new SimpleDemoBuilderModelDirector(simpleDemoBuilderModelAbstractorTeacherBuildPtr2);
+
+	delete simpleDemoBuilderModelAbstractorTeacherBuildPtr2;
+	delete simpleDemoBuilderModelDirectorPtr2;
+
+	cout << endl;
+}
+
+void SimpleDemoDesignModelTest::prototypeModel()
+{
+	cout << "this is 原型模式 : " << endl;
+
+	SimpleDemoPrototypeBase* SimpleDemoPrototypeBase1 = new SimpleDemoPrototypeChild();
+	SimpleDemoPrototypeBase1->play();
+
+	SimpleDemoPrototypeBase* SimpleDemoPrototypeBase2 = SimpleDemoPrototypeBase1->clone();
+	SimpleDemoPrototypeBase2->play();
+
+	delete SimpleDemoPrototypeBase1;
+	delete SimpleDemoPrototypeBase2;
+
+	cout << endl;
+}
 
 void SimpleDemoDesignModelTest::simpleFactory()
 {
@@ -158,6 +193,9 @@ void SimpleDemoDesignModelTest::testExecute()
 
 	simpleFactory();//简单工厂模式
 
+	prototypeModel();//原型模式	`
+
+	builderModel();//建造者模式
 	cout << "-----------------------------------------\t simpleDemo 设计模式 测试结束 \t---------------------------------" << endl;
 	cout << endl;
 }
